@@ -142,3 +142,11 @@ def recommend(movie):
 # Testing
 recommend('Avatar')
 
+import pickle
+
+pickle.dump(movie_df, open('movies.pkl', 'wb'))
+
+pickle.dump(movie_df.to_dict(), open('movie_dict.pkl', 'wb'))
+
+pickle.dump(similarity, open('similarity.pkl', 'wb'))
+
